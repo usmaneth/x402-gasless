@@ -6,20 +6,20 @@ Enable your users to pay with USDC without worrying about gas fees. Fork this re
 
 ---
 
-> ⚠️ **Beta Software** - Core functionality is tested and working with real Alchemy Account Kit integration. The demo client demonstrates actual gasless transactions. Test thoroughly in your environment before production use. [Report issues →](https://github.com/usmaneth/x402-gasless/issues)
+> ⚠️ **Beta Software** - Core functionality is tested and working with real Alchemy Account Abstraction integration. The demo client demonstrates actual gasless transactions. Test thoroughly in your environment before production use. [Report issues →](https://github.com/usmaneth/x402-gasless/issues)
 
 ---
 
-## ✨ Features
+## Features
 
-- ✅ **Gasless for users** - No ETH needed, just USDC
-- ✅ **Pay Alchemy directly** - No middleman, no markup
-- ✅ **Fork & deploy in 5 min** - Batteries included
-- ✅ **Multi-chain support** - Base, Ethereum, Polygon, Arbitrum, Optimism
-- ✅ **Plug-and-play** - Works with Vend and any x402 resource server
-- ✅ **Free tier available** - Alchemy offers free gas sponsorship tier
+- **Gasless for users** - No ETH needed, just USDC
+- **Pay Alchemy directly** - No middleman, no markup
+- **Fork & deploy in 5 min** - Batteries included
+- **Multi-chain support** - Base, Ethereum, Polygon, Arbitrum, Optimism
+- **Plug-and-play** - Works with Vend and any x402 resource server
+- **Free tier available** - Alchemy offers free gas sponsorship tier
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # 1. Clone the repo
@@ -38,11 +38,11 @@ npm run dev
 # Server running at http://localhost:3000 ✅
 ```
 
-## 💰 Costs & Economics
+## Costs & Economics
 
 **Understanding "Gasless":**
 
-🔑 **Gasless ≠ Free** — Here's what it means:
+  **Gasless ≠ Free** — Here's what it means:
 
 - ✅ **Gas fees: $0** (Alchemy sponsors transaction gas)
 - ❌ **USDC payment: Required** (users pay for the resource/API access)
@@ -84,7 +84,7 @@ Client (Smart Wallet) → Resource Server (Vend) → x402-gasless Facilitator �
 4. **Alchemy** sponsors the gas and submits the transaction
 5. **User pays 0 gas** - only the USDC for the resource
 
-## 🧪 Try the Demo Client
+##  Try the Demo Client
 
 Test the complete gasless flow with our ready-to-run demo:
 
@@ -97,51 +97,13 @@ npm start
 ```
 
 The demo shows:
-- ✅ Creating Alchemy smart wallet
-- ✅ Building UserOperations for USDC transfers
-- ✅ Verifying payments with facilitator
-- ✅ Settling with gas sponsorship
-- ✅ Monitoring gasless transactions
+-  Creating Alchemy smart wallet
+-  Building UserOperations for USDC transfers
+-  Verifying payments with facilitator
+-  Settling with gas sponsorship
+-  Monitoring gasless transactions
 
 **[See full demo documentation →](./examples/demo-client/README.md)**
-
-## 🔌 Integration with Vend
-
-### 1. Deploy x402-gasless
-
-```bash
-npm run deploy:railway
-# Or use the deploy button below
-```
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/x402-gasless)
-
-### 2. Configure Vend
-
-```bash
-# In your Vend .env file
-X402_FACILITATOR_URL=https://your-facilitator.railway.app
-PAYMENT_SCHEME=aa-erc4337
-```
-
-### 3. Update Vend middleware
-
-```javascript
-// Vend/src/middleware/payment.js
-import { facilitatorPaymentRequired } from 'x402-gasless/middleware';
-
-export function vendPaymentRequired(options = {}) {
-  return facilitatorPaymentRequired({
-    price: options.price || '0.01',
-    currency: 'USDC',
-    recipient: process.env.PAYMENT_ADDRESS,
-    network: process.env.PAYMENT_NETWORK,
-    facilitatorUrl: process.env.X402_FACILITATOR_URL,
-  });
-}
-```
-
-That's it! Your users now get gasless transactions.
 
 ## 🎯 API Endpoints
 
@@ -186,7 +148,7 @@ Auto-configured out of the box:
 
 All USDC contracts pre-configured!
 
-## 📦 Project Structure
+## Project Structure
 
 ```
 x402-gasless/
@@ -207,7 +169,7 @@ x402-gasless/
 └── tests/                    # Test suite
 ```
 
-## 🛠️ Development
+## Development
 
 ```bash
 # Run in development mode (auto-reload)
@@ -226,7 +188,7 @@ npm run test-connection
 npm run create-policy
 ```
 
-## 🚢 Deployment
+## Deployment
 
 ### Railway (Recommended)
 ```bash
@@ -248,7 +210,7 @@ Make sure to set these in your deployment platform:
 - `NODE_ENV=production`
 - `PORT=3000` (or your preferred port)
 
-## 📚 Documentation
+##  Documentation
 
 - [Quick Start Guide](./docs/quickstart.md)
 - [API Reference](./docs/api-reference.md)
@@ -256,7 +218,7 @@ Make sure to set these in your deployment platform:
 - [Deployment Guide](./docs/deployment.md)
 - [FAQ](./docs/faq.md)
 
-## 🎯 Use Cases
+##  Use Cases
 
 - **Data APIs:** Sell blockchain data with USDC payments (like Vend)
 - **AI Agents:** Enable autonomous payments without gas complexity
@@ -264,15 +226,15 @@ Make sure to set these in your deployment platform:
 - **DeFi:** Onboard users without requiring gas tokens
 - **Paywalls:** Monetize content with microtransactions
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions welcome! Please read our [Contributing Guide](./CONTRIBUTING.md) first.
 
-## 📄 License
+##  License
 
 MIT - Fork freely!
 
-## 🔗 Links
+##  Links
 
 - [Alchemy Account Kit Docs](https://accountkit.alchemy.com/)
 - [x402 Protocol](https://x402.org)
