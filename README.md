@@ -21,9 +21,22 @@ Enable your users to pay with USDC without worrying about gas fees. Fork this re
 
 ## Quick Start
 
+### Option 1: Install from npm (Recommended)
+
+```bash
+# Install globally
+npm install -g x402-gasless
+
+# Or use npx (no installation needed)
+npx x402-gasless setup
+npx x402-gasless start
+```
+
+### Option 2: Clone from GitHub
+
 ```bash
 # 1. Clone the repo
-git clone https://github.com/your-org/x402-gasless
+git clone https://github.com/usmaneth/x402-gasless
 cd x402-gasless
 
 # 2. Install dependencies

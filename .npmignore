@@ -1,0 +1,57 @@
+# npm publish ignore list
+# Only publish what's needed to run the package
+
+# Development files
+.env
+.env.local
+.env.*.local
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Tests
+tests/
+*.test.js
+*.spec.js
+coverage/
+.nyc_output/
+
+# Development tools
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Documentation (keep README, LICENSE, CONTRIBUTING)
+docs/
+DEMO_SCRIPT.md
+RELEASE_CHECKLIST.md
+
+# Examples (these are in the repo but not needed for npm package)
+examples/
+
+# Docker (not needed for npm package)
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Build artifacts
+dist/
+build/
+tmp/
+temp/
+
+# Dependencies (will be installed by npm)
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
