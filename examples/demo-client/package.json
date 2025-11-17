@@ -1,0 +1,28 @@
+{
+  "name": "x402-gasless-demo-client",
+  "version": "1.0.0",
+  "description": "Demo client for testing x402-gasless facilitator with real Alchemy UserOperations",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "demo": "node index.js"
+  },
+  "keywords": [
+    "x402",
+    "alchemy",
+    "account-abstraction",
+    "gasless",
+    "demo"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@aa-sdk/core": "^4.0.0",
+    "@account-kit/core": "^4.0.0",
+    "@account-kit/smart-contracts": "^4.0.0",
+    "@account-kit/infra": "^4.0.0",
+    "dotenv": "^16.3.1",
+    "viem": "^2.21.0"
+  }
+}

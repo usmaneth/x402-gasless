@@ -1,0 +1,64 @@
+{
+  "name": "x402-gasless",
+  "version": "1.0.0",
+  "description": "Gasless x402 facilitator using Alchemy Account Abstraction - Enable gasless USDC payments for your x402 resource servers",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "NODE_ENV=production node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
+    "setup": "node scripts/setup.js",
+    "create-policy": "node scripts/create-policy.js",
+    "test-connection": "node scripts/test-connection.js",
+    "health": "curl http://localhost:3000/health"
+  },
+  "keywords": [
+    "x402",
+    "402",
+    "payment-required",
+    "gasless",
+    "alchemy",
+    "account-abstraction",
+    "erc-4337",
+    "paymaster",
+    "facilitator",
+    "usdc",
+    "micropayments",
+    "web3",
+    "ethereum",
+    "base",
+    "blockchain"
+  ],
+  "author": "x402-gasless contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usmaneth/x402-gasless.git"
+  },
+  "bugs": {
+    "url": "https://github.com/usmaneth/x402-gasless/issues"
+  },
+  "homepage": "https://github.com/usmaneth/x402-gasless#readme",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@account-kit/core": "^4.0.0",
+    "@account-kit/smart-contracts": "^4.0.0",
+    "@account-kit/signer": "^4.0.0",
+    "alchemy-sdk": "^3.4.8",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "pino": "^8.16.2",
+    "pino-pretty": "^10.2.3",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "@types/jest": "^29.5.8"
+  }
+}

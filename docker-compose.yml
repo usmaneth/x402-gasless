@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  x402-gasless:
+    build: .
+    container_name: x402-gasless
+    ports:
+      - "${PORT:-3000}:3000"
+    environment:
+      - ALCHEMY_API_KEY=${ALCHEMY_API_KEY}
+      - ALCHEMY_GAS_POLICY_ID=${ALCHEMY_GAS_POLICY_ID}
+      - PORT=3000
+      - HOST=0.0.0.0
+      - NODE_ENV=production
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
