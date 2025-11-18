@@ -1,5 +1,9 @@
 # x402-gasless
 
+[![npm version](https://badge.fury.io/js/x402-gasless.svg)](https://www.npmjs.com/package/x402-gasless)
+[![npm downloads](https://img.shields.io/npm/dm/x402-gasless.svg)](https://www.npmjs.com/package/x402-gasless)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 > **Gasless transactions for x402 payments using Alchemy's Account Abstraction**
 
 Enable your users to pay with USDC without worrying about gas fees. Fork this repo, add your Alchemy API key, and deploy in 5 minutes.
