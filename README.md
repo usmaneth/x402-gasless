@@ -21,7 +21,6 @@ Enable your users to pay with USDC without worrying about gas fees. Fork this re
 - **Fork & deploy in 5 min** - Batteries included
 - **Multi-chain support** - Base, Ethereum, Polygon, Arbitrum, Optimism
 - **Plug-and-play** - Works with Vend and any x402 resource server
-- **Free tier available** - Alchemy offers free gas sponsorship tier
 
 ## Quick Start
 
