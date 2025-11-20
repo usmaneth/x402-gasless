@@ -60,7 +60,7 @@ npm run dev
 
   **Gasless ≠ Free** — Here's what it means:
 
-- ✅ **Gas fees: $0** (Alchemy sponsors transaction gas)
+- ✅ **Gas fees: $0** (You sponsor your users transaction gas)
 - ❌ **USDC payment: Required** (users pay for the resource/API access)
 
 Think of it like Amazon Prime:
